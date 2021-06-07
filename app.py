@@ -9,16 +9,15 @@ hops = hs.Hops(app)
     "/test",
     name="test",
     inputs=[
-        hs.HopsInteger(" number", "n", "test parameter"),
+        hs.HopsString("Name", "N", "Your name"),
     ],
     outputs=[
-        hs.HopsInteger("list", "I", "list of numbers" ,hs.HopsParamAccess.TREE)
+        hs.HopsString("Welcome", "W", "Welcome to")
     ]
 )
 def test(n):
 
-    nested = [[j for j in range(n)] for i in range(n)]      
-    return nested
+    return "Welcome, {} to the MaCAD Heroku server", format(n) 
 
 if __name__ == "__main__":
     app.run(debug=True)
