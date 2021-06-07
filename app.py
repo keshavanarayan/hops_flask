@@ -16,8 +16,8 @@ hops = hs.Hops(app)
     ]
 )
 def test(n):
-
-    return "Welcome, {} to the MaCAD Heroku server", format(n) 
+    s = "Welcome, {} to the MaCAD Heroku server".format(n) 
+    return s
 
 if __name__ == "__main__":
     app.run(debug=True)
