@@ -9,7 +9,6 @@ import pickle
 from pickle import dump
 
 
-
 # register hops app as middleware
 app = Flask(__name__)
 hops = hs.Hops(app)

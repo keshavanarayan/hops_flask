@@ -8,3 +8,4 @@ Jinja2==3.0.1
 MarkupSafe==2.0.1
 rhino3dm==7.6.0
 Werkzeug==2.0.1
+Pickle-mixin==1.0.2
