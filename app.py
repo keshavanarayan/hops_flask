@@ -25,9 +25,8 @@ hops = hs.Hops(app)
     ]
 )
 
-def MyMLPred(Z1):
+def prediction(Z1):
 
-    def prediction(Z1):
         filename1 = 'Model_BED.h5'
 
         model1 = pickle.load(open(filename1, 'rb'))
@@ -207,21 +206,15 @@ def MyMLPred(Z1):
 
         list = list_f+lista
 
-        flat_list = []
+        output = []
 
         # ## iterating over the data
         for item in list:
         # # # appending elements to the flat_list
-            flat_list += item
+            output += item
         
-        return flat_list
+        return output
 
-
-# #Save a txt for grasshopper in case we need it for something
-    # np.savetxt("prediction.txt", flat_list)
-    # print("TEXT SAVED")
-    output = prediction(Z1)
-    return output
 
 
 if __name__ == "__main__":
