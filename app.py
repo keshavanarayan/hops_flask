@@ -2,9 +2,6 @@ from flask import Flask
 import ghhops_server as hs
 import numpy as np
 import string
-import tensorflow as tf
-import tensorflow.keras
-
 import pickle
 from pickle import dump
 
